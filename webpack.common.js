@@ -12,8 +12,11 @@ const config = {
     extensions: ['.js', '.scss'],
     alias: {
       api: path.resolve(__dirname, 'src/api'),
+      assets: path.resolve(__dirname, 'src/assets'),
       components: path.resolve(__dirname, 'src/components'),
-      pages: path.resolve(__dirname, 'src/pages'),
+      modules: path.resolve(__dirname, 'src/modules'),
+      maps: path.resolve(__dirname, 'src/maps'),
+      page: path.resolve(__dirname, 'src/page'),
       store: path.resolve(__dirname, 'src/store'),
       utils: path.resolve(__dirname, 'src/utils'),
     },
@@ -40,6 +43,29 @@ const config = {
             },
           },
           'sass-loader',
+        ],
+      },
+      {
+        test: /\.svg$/,
+        include: path.resolve(__dirname, 'src'),
+        use: ({ resource }) => [
+          {
+            loader: 'babel-loader?cacheDirectory',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              svgo: {
+                plugins: [
+                  {
+                    cleanupIDs: {
+                      minify: false,
+                    },
+                  },
+                ],
+              },
+            },
+          },
         ],
       },
       {

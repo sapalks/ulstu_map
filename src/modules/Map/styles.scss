@@ -1,0 +1,19 @@
+.container {
+  width: 78vw;
+
+  & > div:nth-child(1) {
+    cursor: grab !important;
+  }
+
+  & > div > div > div {
+    transition: 0.1s;
+  }
+}
+
+.interactiveObject {
+  cursor: pointer;
+
+  &:hover > path {
+    fill: #80c2ff;
+  }
+}

@@ -1,11 +1,18 @@
 import React from 'react';
 import { Provider as StoreProvider } from 'react-redux';
 
+import DataLoader from 'components/Common/DataLoader';
+import Page from 'page';
+
 import store from 'store';
+
+import 'normalize.css';
 
 const App = () => (
   <StoreProvider store={store}>
-    <h1>Test</h1>
+    <DataLoader>
+      <Page />
+    </DataLoader>
   </StoreProvider>
 );
 
