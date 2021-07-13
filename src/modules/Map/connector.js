@@ -5,7 +5,9 @@ import { selectors, actions } from 'store/slice';
 import Controller from './controller';
 
 const mapStateToProps = (state) => ({
-  globalMapData: selectors.getGlobalMapData(state),
+  directedElementId: selectors.getDirectedElementId(state),
+  activeMapName: selectors.getActiveMapName(state),
+  mapData: selectors.getActiveMapData(state),
 });
 
 const mapDispatchToProps = {

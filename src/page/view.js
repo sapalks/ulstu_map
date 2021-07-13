@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Grid from 'components/Common/Grid';
+import ModalContainer from 'components/Common/ModalContainer';
 import Map from 'modules/Map';
 import Search from 'modules/Search';
 import CorpusList from 'modules/CorpusList';
@@ -14,6 +15,7 @@ const View = () => (
       <CorpusList />
     </Grid>
     <Map />
+    <ModalContainer />
   </Grid>
 );
 

@@ -1,5 +1,6 @@
 .container {
   width: 78vw;
+  height: 100vh;
 
   & > div:nth-child(1) {
     cursor: grab !important;
@@ -16,4 +17,8 @@
   &:hover > path {
     fill: #80c2ff;
   }
+}
+
+.directed > path {
+  fill: #80c2ff;
 }

@@ -11,7 +11,19 @@ const defaultMapParams = {
   translation: { x: 0, y: 0 },
 };
 
-const Controller = ({ globalMapData, setActiveElement, ...rest }) => {
+const setDirectedElement = (mapData, directedElementId) => {
+  Object.values(mapData).forEach(({ id }) => {
+    if (id === directedElementId) {
+      const element = document.getElementById(id);
+      element.classList.add(styles.directed);
+    } else {
+      const element = document.getElementById(id);
+      element.classList.remove(styles.directed);
+    }
+  });
+};
+
+const Controller = ({ mapData, setActiveElement, directedElementId, activeMapName, ...rest }) => {
   const [mapParams, setMapParams] = useState(defaultMapParams);
 
   const handler = (event) => {
@@ -21,13 +33,14 @@ const Controller = ({ globalMapData, setActiveElement, ...rest }) => {
       },
     } = event;
     setActiveElement(mapElementId);
-    setMapParams({
-      ...mapParams,
-      scale: focusScale,
-    });
   };
 
-  const addClickListener = (mapData) => {
+  useEffect(() => {
+    if (!mapData) {
+      return null;
+    }
+
+    setDirectedElement(mapData, directedElementId);
     Object.keys(mapData).forEach((element) => {
       const mapElement = document.getElementById(element);
       if (!mapElement) {
@@ -37,28 +50,27 @@ const Controller = ({ globalMapData, setActiveElement, ...rest }) => {
       mapElement.addEventListener('click', handler);
       mapElement.classList.add(styles.interactiveObject);
     });
-  };
-
-  const removeClickListener = (mapData) => {
-    Object.keys(mapData).forEach((element) => {
-      const mapElement = document.getElementById(element);
-      mapElement.removeEventListener('click', handler);
-    });
-  };
-
-  useEffect(() => {
-    if (!globalMapData) {
-      return null;
-    }
-
-    addClickListener(globalMapData);
 
     return () => {
-      removeClickListener(globalMapData);
-    };
-  }, [globalMapData]);
+      Object.keys(mapData).forEach((element) => {
+        const mapElement = document.getElementById(element);
+        if (!mapElement) {
+          return null;
+        }
 
-  return <View {...rest} mapParams={mapParams} setMapParams={setMapParams} />;
+        mapElement.removeEventListener('click', handler);
+      });
+    };
+  }, [mapData, directedElementId, activeMapName]);
+
+  return (
+    <View
+      {...rest}
+      mapParams={mapParams}
+      setMapParams={setMapParams}
+      activeMapName={activeMapName}
+    />
+  );
 };
 
 export default Controller;

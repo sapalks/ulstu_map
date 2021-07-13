@@ -1,3 +1,3 @@
-import Component from './connect';
+import Component from './connector';
 
 export default Component;

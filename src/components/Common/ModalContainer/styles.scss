@@ -1,0 +1,33 @@
+.container {
+  width: fit-content;
+  height: fit-content;
+  min-width: 150px;
+  min-height: 70px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  left: 300px;
+}
+
+.crossIcon {
+  width: 25px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  bottom: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
