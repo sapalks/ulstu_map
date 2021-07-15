@@ -11,7 +11,7 @@ const initialState = {
   directedElementId: null,
   filter: null,
   global: createMapBlock(),
-  map2: createMapBlock(),
+  'c1-f1': createMapBlock(),
 };
 
 const reducers = {
@@ -44,7 +44,7 @@ const extraReducers = {
     state.activeMapData = payload;
   },
   [asyncActions.loadMap2.fulfilled]: (state, { payload }) => {
-    state.map2.data = payload;
+    state['c1-f1'].data = payload;
   },
 };
 

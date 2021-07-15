@@ -10,7 +10,7 @@ import styles from './styles.scss';
 
 const View = () => (
   <Grid className={styles.container}>
-    <Grid direction="col" className={styles.navContainer}>
+    <Grid direction="col" className={styles.navContainer} id="corpusList">
       <Search />
       <CorpusList />
     </Grid>
@@ -18,5 +18,4 @@ const View = () => (
     <ModalContainer />
   </Grid>
 );
-
 export default View;
