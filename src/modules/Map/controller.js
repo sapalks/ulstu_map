@@ -31,6 +31,7 @@ const getMapElementPos = (
   if (!mapElement) {
     return null;
   }
+
   const { id: elementId } = mapElement;
   const element = document.getElementById(elementId).getBoundingClientRect();
 
