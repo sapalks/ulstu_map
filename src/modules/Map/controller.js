@@ -1,11 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import View from './view';
 
 import styles from './styles.scss';
 
 const defaultScale = 0.4;
-const focusScale = 0.7;
+const focusScale = 0.45;
+const searchContainerWidth = 250;
 
 const defaultMapParams = {
   scale: defaultScale,
@@ -24,22 +25,27 @@ const setDirectedElement = (mapData, directedElementId) => {
   });
 };
 
-const getMapElementPos = (
+const getMapParamsOnActive = ({
   mapElement,
-  { clientWidth: mapContainerWidth, clientHeight: mapContainerHeight },
-) => {
+  mapContainer: { clientWidth: mapWidth, clientHeight: mapHeight },
+  mapParams: {
+    translation: { x: mapX, y: mapY },
+  },
+}) => {
   if (!mapElement) {
-    return null;
+    return defaultMapParams;
   }
-
   const { id: elementId } = mapElement;
-  const element = document.getElementById(elementId).getBoundingClientRect();
+  const { left, top } = document.getElementById(elementId).getBoundingClientRect();
+  const { width } = document.getElementById(elementId).getBBox();
 
-  const x = mapContainerWidth / 2 - element.left;
-  const y = mapContainerHeight / 2 - element.top;
-  const position = { x, y };
+  const x = mapX - left + searchContainerWidth + mapWidth / 2 - (width / 2) * focusScale;
+  const y = mapY - top + mapHeight / 2;
 
-  return position;
+  return {
+    scale: focusScale,
+    translation: { x: x <= 150 ? x : 0, y: y <= 150 ? y : 0 },
+  };
 };
 
 const getLeftSpace = ({ clientWidth: containerWidth }, { width: mapWidth }) => {
@@ -54,10 +60,12 @@ const Controller = ({
   directedElementId,
   activeMapName,
   activeMapElement,
+  setMapScale,
   ...rest
 }) => {
-  const [mapParams, setMapParams] = useState(defaultMapParams);
   const mapContainerRef = useRef(null);
+  const mapRef = useRef(null);
+  const [mapParams, setMapParams] = useState(defaultMapParams);
 
   const handler = (event) => {
     const {
@@ -65,9 +73,12 @@ const Controller = ({
         parentElement: { id: mapElementId },
       },
     } = event;
-    setMapParams({ ...mapParams, scale: focusScale });
     setActiveElement(mapElementId);
   };
+
+  useEffect(() => {
+    setMapScale(mapParams.scale);
+  }, [mapParams.scale]);
 
   useEffect(() => {
     if (!mapData) {
@@ -102,13 +113,15 @@ const Controller = ({
       return null;
     }
 
-    const elementPos = getMapElementPos(activeMapElement, mapContainerRef.current);
-    console.log(elementPos);
-    setMapParams({
-      ...mapParams,
-      translation: { ...elementPos },
+    setMapParams({ ...mapParams, scale: focusScale });
+    const activeMapParams = getMapParamsOnActive({
+      mapElement: activeMapElement,
+      mapContainer: mapContainerRef.current,
+      mapParams,
     });
-  }, [mapContainerRef, activeMapElement]);
+
+    setMapParams({ ...activeMapParams });
+  }, [mapContainerRef, activeMapElement, mapRef]);
 
   useEffect(() => {
     const mapImage = document.getElementsByClassName(styles.image)[0].getBoundingClientRect();
@@ -130,6 +143,7 @@ const Controller = ({
       setMapParams={setMapParams}
       activeMapName={activeMapName}
       mapContainerRef={mapContainerRef}
+      mapRef={mapRef}
     />
   );
 };

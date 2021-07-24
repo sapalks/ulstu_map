@@ -1,11 +1,19 @@
 import generateAsyncThunk from 'utils/generateAsyncThunk';
 
 import loadGlobalMap from 'api/loadGlobalMap';
-import loadMap2 from 'api/loadMap2';
+import loadCorpus1 from 'api/loadCorpus1';
+import loadCorpus2 from 'api/loadCorpus2';
+import loadCorpus3 from 'api/loadCorpus3';
+import loadCorpus4 from 'api/loadCorpus4';
+import loadCorpus5 from 'api/loadCorpus5';
 
 const asyncActions = {
   loadGlobalMap: generateAsyncThunk('store/loadGlobalMap', loadGlobalMap),
-  loadMap2: generateAsyncThunk('store/loadMap2', loadMap2),
+  loadCorpus1: generateAsyncThunk('store/loadCorpus1', loadCorpus1),
+  loadCorpus2: generateAsyncThunk('store/loadCorpus2', loadCorpus2),
+  loadCorpus3: generateAsyncThunk('store/loadCorpus3', loadCorpus3),
+  loadCorpus4: generateAsyncThunk('store/loadCorpus4', loadCorpus4),
+  loadCorpus5: generateAsyncThunk('store/loadCorpus5', loadCorpus5),
 };
 
 export default asyncActions;

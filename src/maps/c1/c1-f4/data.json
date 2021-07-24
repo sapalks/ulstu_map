@@ -1,0 +1,25 @@
+{
+  "config": {
+    "mapName": "c1-f4"
+  },
+  "items": {
+    "c1-f4-staff-only": {
+      "id": "c1-f4-staff-only",
+      "name": "Название 1",
+      "action": "info",
+      "disc": "Описание 1"
+    },
+    "c1-f4-n401": {
+      "id": "c1-f4-n401",
+      "name": "Название 1",
+      "action": "info",
+      "disc": "Описание 1"
+    },
+    "c1-f4-n400": {
+      "id": "c1-f4-n400",
+      "name": "Название 1",
+      "action": "info",
+      "disc": "Описание 1"
+    }
+  }
+}

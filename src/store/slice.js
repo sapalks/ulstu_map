@@ -2,16 +2,26 @@ import { createSlice, current } from '@reduxjs/toolkit';
 
 import asyncActions from './asyncActions';
 
-const createMapBlock = () => ({ data: null, isLoaded: false, activeElement: null });
-
 const initialState = {
   activeMapName: 'global',
   activeElement: null,
   activeMapData: null,
   directedElementId: null,
   filter: null,
-  global: createMapBlock(),
-  'c1-f1': createMapBlock(),
+  mapScale: null,
+  maps: null,
+};
+
+const mapHandler = (state, mapsData) => {
+  const formatedData = mapsData.reduce(
+    (prev, { config: { mapName }, items }) => ({
+      ...prev,
+      [mapName]: { items },
+    }),
+    {},
+  );
+
+  state.maps = { ...state.maps, ...formatedData };
 };
 
 const reducers = {
@@ -36,15 +46,32 @@ const reducers = {
   setFilter: (state, { payload: filter }) => {
     state.filter = filter;
   },
+  setMapScale: (state, { payload: scale }) => {
+    state.mapScale = scale;
+  },
 };
 
 const extraReducers = {
-  [asyncActions.loadGlobalMap.fulfilled]: (state, { payload }) => {
-    state.global.data = payload;
-    state.activeMapData = payload;
+  [asyncActions.loadGlobalMap.fulfilled]: (state, { payload: { config, items } }) => {
+    const { mapName } = config;
+
+    state.activeMapData = items;
+    state.maps = { ...state.maps, [mapName]: { items } };
   },
-  [asyncActions.loadMap2.fulfilled]: (state, { payload }) => {
-    state['c1-f1'].data = payload;
+  [asyncActions.loadCorpus1.fulfilled]: (state, { payload }) => {
+    mapHandler(state, payload);
+  },
+  [asyncActions.loadCorpus2.fulfilled]: (state, { payload }) => {
+    mapHandler(state, payload);
+  },
+  [asyncActions.loadCorpus3.fulfilled]: (state, { payload }) => {
+    mapHandler(state, payload);
+  },
+  [asyncActions.loadCorpus4.fulfilled]: (state, { payload }) => {
+    mapHandler(state, payload);
+  },
+  [asyncActions.loadCorpus5.fulfilled]: (state, { payload }) => {
+    mapHandler(state, payload);
   },
 };
 
@@ -56,12 +83,13 @@ const { actions, reducer } = createSlice({
 });
 
 const selectors = {
-  getGlobalMapData: (state) => state.global.data,
+  getGlobalMapData: (state) => state?.global?.data,
   getActiveMapName: (state) => state.activeMapName,
   getActiveElement: (state) => state.activeElement,
   getActiveMapData: (state) => state.activeMapData,
   getDirectedElementId: (state) => state.directedElementId,
   getFilter: (state) => state.filter,
+  getMapScale: (state) => state.mapScale,
 };
 
 export { actions, selectors, asyncActions };

@@ -6,6 +6,7 @@ import View from './view';
 
 const mapStateToProps = (state) => ({
   activeElement: selectors.getActiveElement(state),
+  mapScale: selectors.getMapScale(state),
 });
 
 const mapDispatchToProps = {

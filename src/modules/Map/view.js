@@ -1,6 +1,8 @@
 import React from 'react';
 import { MapInteractionCSS } from 'react-map-interaction';
 
+import ModalContainer from 'components/Common/ModalContainer';
+
 import GlobalMap from 'maps/global';
 import C1F0 from 'maps/c1/c1-f0';
 import C1F1 from 'maps/c1/c1-f1';
@@ -57,6 +59,7 @@ const View = ({ mapParams, setMapParams, activeMapName, mapContainerRef, mapRef 
       <div className={styles.image} ref={mapRef}>
         {mapsVocabulary[activeMapName]}
       </div>
+      <ModalContainer />
     </MapInteractionCSS>
   </div>
 );

@@ -1,12 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
+    // publicPath: '/ulstu_map/',
   },
   resolve: {
     extensions: ['.js', '.scss'],
@@ -19,6 +21,7 @@ const config = {
       page: path.resolve(__dirname, 'src/page'),
       store: path.resolve(__dirname, 'src/store'),
       utils: path.resolve(__dirname, 'src/utils'),
+      process: 'process/browser',
     },
   },
   module: {
@@ -48,25 +51,7 @@ const config = {
       {
         test: /\.svg$/,
         include: path.resolve(__dirname, 'src'),
-        use: ({ resource }) => [
-          {
-            loader: 'babel-loader?cacheDirectory',
-          },
-          {
-            loader: 'react-svg-loader',
-            options: {
-              svgo: {
-                plugins: [
-                  {
-                    cleanupIDs: {
-                      minify: false,
-                    },
-                  },
-                ],
-              },
-            },
-          },
-        ],
+        use: ['react-svg-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|woff|woff2)$/i,
@@ -78,10 +63,18 @@ const config = {
       },
     ],
   },
+
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './template/index.html',
+      template: path.resolve(__dirname, 'template/index.html'),
     }),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
+    // new CopyPlugin({
+    //   patterns: [{ from: 'src/maps', to: 'maps' }],
+    // }),
   ],
 };
 

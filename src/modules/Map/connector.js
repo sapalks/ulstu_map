@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   setActiveElement: actions.setActiveElement,
+  setMapScale: actions.setMapScale,
 };
 
 const ConnectedController = connect(mapStateToProps, mapDispatchToProps)(Controller);

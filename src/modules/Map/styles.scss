@@ -1,5 +1,5 @@
 .container {
-  width: 78vw;
+  width: 82%;
   height: 100vh;
 
   & > div:nth-child(1) {
@@ -13,10 +13,15 @@
 
 .interactiveObject {
   cursor: pointer;
+  display: block;
 
-  &:hover > path {
+  &:hover > path:nth-child(1) {
     fill: #80c2ff;
   }
+}
+
+.selectedElement > path:nth-child(1) {
+  fill: #80c2ff;
 }
 
 .directed > path {

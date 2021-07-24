@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const loadGlobalMap = () => {
-  const response = axios.get('./maps/global/global.json');
+const loadGlobalMap = async () => {
+  const response = await axios.get('./maps/global/global.json');
 
   return response;
 };
