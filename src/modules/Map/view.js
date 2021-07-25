@@ -53,9 +53,22 @@ const mapsVocabulary = {
   'c5-f4': <C5F4 />,
 };
 
-const View = ({ mapParams, setMapParams, activeMapName, mapContainerRef, mapRef }) => (
+const View = ({
+  mapParams,
+  setMapParams,
+  setActiveElement,
+  activeMapName,
+  mapContainerRef,
+  mapRef,
+}) => (
   <div className={styles.container} ref={mapContainerRef}>
-    <MapInteractionCSS value={mapParams} onChange={(value) => setMapParams(value)}>
+    <MapInteractionCSS
+      value={mapParams}
+      onChange={(value) => {
+        setActiveElement(null);
+        setMapParams(value);
+      }}
+    >
       <div className={styles.image} ref={mapRef}>
         {mapsVocabulary[activeMapName]}
       </div>

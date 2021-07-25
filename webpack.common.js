@@ -20,6 +20,7 @@ const config = {
       maps: path.resolve(__dirname, 'src/maps'),
       page: path.resolve(__dirname, 'src/page'),
       store: path.resolve(__dirname, 'src/store'),
+      styles: path.resolve(__dirname, 'src/styles'),
       utils: path.resolve(__dirname, 'src/utils'),
       process: 'process/browser',
     },
@@ -72,9 +73,6 @@ const config = {
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
-    // new CopyPlugin({
-    //   patterns: [{ from: 'src/maps', to: 'maps' }],
-    // }),
   ],
 };
 

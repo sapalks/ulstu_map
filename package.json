@@ -26,6 +26,7 @@
     "eslint": "^7.26.0",
     "file-loader": "^6.2.0",
     "jest": "^27.0.4",
+    "json-loader": "^0.5.7",
     "process": "^0.11.10",
     "react-svg-loader": "^3.0.4-alpha.3",
     "sass": "^1.32.8",

@@ -290,6 +290,46 @@
       "name": "Название 1",
       "action": "info",
       "disc": "Описание 1"
+    },
+    "stairs": {
+      "id": "stairs_1",
+      "name": "Название 1",
+      "action": "move",
+      "direction": "global",
+      "directionName": "Общая карта",
+      "disc": "Описание 1"
+    },
+    "stairs_2": {
+      "id": "stairs_2",
+      "name": "Название 1",
+      "action": "move",
+      "direction": "global",
+      "directionName": "Общая карта",
+      "disc": "Описание 1"
+    },
+    "stairs_3": {
+      "id": "stairs_3",
+      "name": "Название 1",
+      "action": "move",
+      "direction": "global",
+      "directionName": "Общая карта",
+      "disc": "Описание 1"
+    },
+    "stairs_4": {
+      "id": "stairs_4",
+      "name": "Название 1",
+      "action": "move",
+      "direction": "global",
+      "directionName": "Общая карта",
+      "disc": "Описание 1"
+    },
+    "stairs_5": {
+      "id": "stairs_5",
+      "name": "Название 1",
+      "action": "move",
+      "direction": "global",
+      "directionName": "Общая карта",
+      "disc": "Описание 1"
     }
   }
 }

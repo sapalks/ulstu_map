@@ -20,9 +20,21 @@ const setDirectedElement = (mapData, directedElementId) => {
       element.classList.add(styles.directed);
     } else {
       const element = document.getElementById(id);
+
+      if (!element) {
+        return null;
+      }
+
       element.classList.remove(styles.directed);
     }
   });
+};
+
+const getMapSpace = ({ clientWidth, clientHeight }, { width, height }) => {
+  const leftSpace = clientWidth / 2 - width / 2;
+  const topSpace = clientHeight / 2 - height / 2;
+
+  return { x: leftSpace, y: topSpace };
 };
 
 const getMapParamsOnActive = ({
@@ -30,28 +42,28 @@ const getMapParamsOnActive = ({
   mapContainer: { clientWidth: mapWidth, clientHeight: mapHeight },
   mapParams: {
     translation: { x: mapX, y: mapY },
+    scale,
   },
 }) => {
   if (!mapElement) {
-    return defaultMapParams;
+    return {
+      translation: { x: mapX, y: mapY },
+      scale,
+    };
   }
+
   const { id: elementId } = mapElement;
   const { left, top } = document.getElementById(elementId).getBoundingClientRect();
   const { width } = document.getElementById(elementId).getBBox();
 
-  const x = mapX - left + searchContainerWidth + mapWidth / 2 - (width / 2) * focusScale;
+  const centerOfActiveElement = (width / 2) * focusScale;
+  const x = mapX - left + searchContainerWidth + mapWidth / 2 - centerOfActiveElement;
   const y = mapY - top + mapHeight / 2;
 
   return {
     scale: focusScale,
-    translation: { x: x <= 150 ? x : 0, y: y <= 150 ? y : 0 },
+    translation: { x, y },
   };
-};
-
-const getLeftSpace = ({ clientWidth: containerWidth }, { width: mapWidth }) => {
-  const leftSpace = containerWidth / 2 - mapWidth / 2;
-
-  return leftSpace;
 };
 
 const Controller = ({
@@ -128,19 +140,21 @@ const Controller = ({
     if (!mapContainerRef.current || !mapImage) {
       return null;
     }
-    const leftSpace = getLeftSpace(mapContainerRef.current, mapImage);
+
+    const { x, y } = getMapSpace(mapContainerRef.current, mapImage);
 
     setMapParams({
       ...mapParams,
-      translation: { x: leftSpace, y: mapParams.translation.y },
+      translation: { x, y },
     });
-  }, [mapContainerRef]);
+  }, [mapContainerRef, activeMapName]);
 
   return (
     <View
       {...rest}
       mapParams={mapParams}
       setMapParams={setMapParams}
+      setActiveElement={setActiveElement}
       activeMapName={activeMapName}
       mapContainerRef={mapContainerRef}
       mapRef={mapRef}

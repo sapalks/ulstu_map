@@ -1,15 +1,25 @@
 import React from 'react';
 
 import CrossIcon from 'assets/svg/cross.svg';
-import BuildingModal from 'components/Modals/BuildingModal';
+import MoveInfoModal from 'components/Modals/MoveInfoModal';
+import InfoModal from 'components/Modals/InfoModal';
+import MoveModal from 'components/Modals/MoveModal';
 
 import styles from './styles.scss';
 
 const getModalContent = (activeElement) => {
   const { action } = activeElement;
 
+  if (action === 'move_info') {
+    return <MoveInfoModal element={activeElement} />;
+  }
+
   if (action === 'move') {
-    return <BuildingModal element={activeElement} />;
+    return <MoveModal element={activeElement} />;
+  }
+
+  if (action === 'info') {
+    return <InfoModal element={activeElement} />;
   }
 
   return null;

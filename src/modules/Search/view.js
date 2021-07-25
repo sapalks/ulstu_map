@@ -17,7 +17,7 @@ const View = ({ filter, setFilter }) => {
         <SearchIcon className={styles.searchIcon} />
         <input
           type="text"
-          placeholder="Поиск"
+          placeholder="Поиск 1"
           value={filter || ''}
           onChange={({ target: { value } }) => setFilter(value)}
         />

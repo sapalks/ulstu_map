@@ -6,147 +6,147 @@
     "c-n1": {
       "id": "c-n1",
       "name": "Название 1",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 1"
     },
     "c-n2": {
       "id": "c-n2",
       "name": "Название 2",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 2"
     },
     "c-n3": {
       "id": "c-n3",
       "name": "Название 3",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 3"
     },
     "c-n4": {
       "id": "c-n4",
       "name": "Название 4",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 4"
     },
     "c-n5": {
       "id": "c-n5",
       "name": "Название 5",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 5"
     },
     "c-n6": {
       "id": "c-n6",
       "name": "Название 6",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 6"
     },
     "c-n7": {
       "id": "c-n7",
       "name": "Название 7",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 7"
     },
     "c-n8": {
       "id": "c-n8",
       "name": "Название 8",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 8"
     },
     "c-n9": {
       "id": "c-n9",
       "name": "Название 9",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 9"
     },
     "c-n10": {
       "id": "c-n10",
       "name": "Название 10",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 10"
     },
     "c-n11": {
       "id": "c-n11",
       "name": "Название 11",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 11"
     },
     "c-n12": {
       "id": "c-n12",
       "name": "Название 12",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 12"
     },
     "c-n13": {
       "id": "c-n13",
       "name": "Название 13",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 13"
     },
     "c-n14": {
       "id": "c-n14",
       "name": "Название 14",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 14"
     },
     "c-n15": {
       "id": "c-n15",
       "name": "Название 15",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 15"
     },
     "c-n16": {
       "id": "c-n16",
       "name": "Название 16",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 16"
     },
     "c-n17": {
       "id": "c-n17",
       "name": "Название 17",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 17"
     },
     "c-n18": {
       "id": "c-n18",
       "name": "Название 18",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 18"
     },
     "c-n19": {
       "id": "c-n19",
       "name": "Название 19",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 19"
     },
     "c-n20": {
       "id": "c-n20",
       "name": "Название 20",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 20"
     },
     "c-n21": {
       "id": "c-n21",
       "name": "Название 21",
-      "action": "move",
+      "action": "move_info",
       "direction": "c1-f1",
       "disc": "Описание 21"
     }

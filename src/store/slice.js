@@ -1,33 +1,33 @@
 import { createSlice, current } from '@reduxjs/toolkit';
 
-import asyncActions from './asyncActions';
+import { global } from 'maps/global';
+import c1 from 'maps/c1';
+import c2 from 'maps/c2';
+import c3 from 'maps/c3';
+import c4 from 'maps/c4';
+import c5 from 'maps/c5';
 
 const initialState = {
   activeMapName: 'global',
   activeElement: null,
-  activeMapData: null,
+  activeMapData: global.items,
   directedElementId: null,
   filter: null,
   mapScale: null,
-  maps: null,
-};
-
-const mapHandler = (state, mapsData) => {
-  const formatedData = mapsData.reduce(
-    (prev, { config: { mapName }, items }) => ({
-      ...prev,
-      [mapName]: { items },
-    }),
-    {},
-  );
-
-  state.maps = { ...state.maps, ...formatedData };
+  maps: {
+    global,
+    ...c1,
+    ...c2,
+    ...c3,
+    ...c4,
+    ...c5,
+  },
 };
 
 const reducers = {
   setActiveMapName: (state, { payload: mapName }) => {
     state.activeMapName = mapName;
-    state.activeMapData = state[mapName].data || null;
+    state.activeMapData = state.maps[mapName].items || null;
   },
   setActiveElement: (state, { payload: elementId }) => {
     if (elementId === null) {
@@ -35,9 +35,8 @@ const reducers = {
 
       return;
     }
-
     const activeMap = state.activeMapName;
-    const element = current(state[activeMap].data[elementId]);
+    const element = current(state.maps[activeMap].items[elementId]);
     state.activeElement = element;
   },
   setDirectedElementId: (state, { payload: elementId }) => {
@@ -51,35 +50,10 @@ const reducers = {
   },
 };
 
-const extraReducers = {
-  [asyncActions.loadGlobalMap.fulfilled]: (state, { payload: { config, items } }) => {
-    const { mapName } = config;
-
-    state.activeMapData = items;
-    state.maps = { ...state.maps, [mapName]: { items } };
-  },
-  [asyncActions.loadCorpus1.fulfilled]: (state, { payload }) => {
-    mapHandler(state, payload);
-  },
-  [asyncActions.loadCorpus2.fulfilled]: (state, { payload }) => {
-    mapHandler(state, payload);
-  },
-  [asyncActions.loadCorpus3.fulfilled]: (state, { payload }) => {
-    mapHandler(state, payload);
-  },
-  [asyncActions.loadCorpus4.fulfilled]: (state, { payload }) => {
-    mapHandler(state, payload);
-  },
-  [asyncActions.loadCorpus5.fulfilled]: (state, { payload }) => {
-    mapHandler(state, payload);
-  },
-};
-
 const { actions, reducer } = createSlice({
   name: 'store',
   reducers,
   initialState,
-  extraReducers,
 });
 
 const selectors = {
@@ -92,6 +66,6 @@ const selectors = {
   getMapScale: (state) => state.mapScale,
 };
 
-export { actions, selectors, asyncActions };
+export { actions, selectors };
 
 export default reducer;

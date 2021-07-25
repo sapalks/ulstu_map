@@ -1,17 +1,16 @@
 import React from 'react';
 
-import EnterIcon from 'assets/svg/enter.svg';
+import MoveButton from 'components/Common/MoveButton';
 
 import styles from './styles.scss';
 
 const View = ({ element, setActiveMapName, setActiveElement }) => {
-  const { name, disc, direction } = element;
+  const { name, direction, directionName } = element;
 
   return (
     <div className={styles.container} title={`Перейти в ${name}`}>
-      <span className={styles.title}>{name}</span>
-      <span className={styles.disc}>{disc}</span>
-      <EnterIcon
+      <span className={styles.title}>{`Перейти на: "${directionName}"?`}</span>
+      <MoveButton
         className={styles.enterIcon}
         onClick={() => {
           setActiveMapName(direction);
