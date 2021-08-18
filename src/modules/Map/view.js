@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MapInteractionCSS } from 'react-map-interaction';
 
 import ModalContainer from 'components/Common/ModalContainer';
@@ -27,6 +27,9 @@ import C5F3 from 'maps/c5/c5-f3';
 import C5F4 from 'maps/c5/c5-f4';
 
 import styles from './styles.scss';
+
+const minScale = 0.3;
+const maxScale = 1.05;
 
 const mapsVocabulary = {
   global: <GlobalMap />,
@@ -65,6 +68,10 @@ const View = ({
     <MapInteractionCSS
       value={mapParams}
       onChange={(value) => {
+        if (value.scale < minScale || value.scale > maxScale) {
+          return null;
+        }
+
         setActiveElement(null);
         setMapParams(value);
       }}

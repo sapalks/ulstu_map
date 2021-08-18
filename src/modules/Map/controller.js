@@ -56,15 +56,13 @@ const getMapParamsOnActive = ({
   const { left, top } = document.getElementById(elementId).getBoundingClientRect();
   const { width } = document.getElementById(elementId).getBBox();
 
-  const centerOfActiveElement = (width / 2) * focusScale;
+  const centerOfActiveElement = (width / 2) * scale;
 
-  // const x = mapX - left + searchContainerWidth + mapWidth / 2 - centerOfActiveElement;
-  // const y = mapY - top + mapHeight / 2;
   const x = mapX - left + searchContainerWidth - centerOfActiveElement + mapWidth / 2;
   const y = mapY - top + mapHeight / 2;
 
   return {
-    scale: focusScale,
+    scale,
     translation: { x, y },
   };
 };
@@ -88,6 +86,7 @@ const Controller = ({
         parentElement: { id: mapElementId },
       },
     } = event;
+
     setActiveElement(mapElementId);
   };
 
@@ -106,7 +105,6 @@ const Controller = ({
       if (!mapElement) {
         return null;
       }
-
       mapElement.addEventListener('click', handler);
       mapElement.classList.add(styles.interactiveObject);
     });
@@ -128,7 +126,6 @@ const Controller = ({
       return null;
     }
 
-    setMapParams({ ...mapParams, scale: focusScale });
     const activeMapParams = getMapParamsOnActive({
       mapElement: activeMapElement,
       mapContainer: mapContainerRef.current,
