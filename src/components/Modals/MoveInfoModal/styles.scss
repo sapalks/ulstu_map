@@ -2,7 +2,7 @@
   width: 300px;
   padding: 10px;
   height: fit-content;
-  max-height: 150px;
+  max-height: 200px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,8 @@
 
 .disc {
   display: block;
+  height: 200px;
+  overflow-y: scroll;
 }
 
 .enterIcon {

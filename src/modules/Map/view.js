@@ -72,8 +72,8 @@ const View = ({
       <div className={styles.image} ref={mapRef}>
         {mapsVocabulary[activeMapName]}
       </div>
-      <ModalContainer />
     </MapInteractionCSS>
+    <ModalContainer mapContainer={mapContainerRef.current} />
   </div>
 );
 export default View;

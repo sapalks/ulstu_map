@@ -1,13 +1,15 @@
 .container {
   width: 82%;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 
   & > div:nth-child(1) {
     cursor: grab !important;
   }
 
   & > div > div > div {
-    transition: 0.1s;
+    transition: transform 0.1s;
   }
 }
 

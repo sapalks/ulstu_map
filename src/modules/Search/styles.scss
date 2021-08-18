@@ -9,42 +9,58 @@
   border-right: 1px solid #f4f4f4;
 }
 
-.searchField {
-  width: 94%;
-  height: 30px;
-  margin: 0 auto;
-  border: 3px solid #bbbbbb;
-  border-radius: 6px;
-  outline: none;
-  background-color: #ffffff;
+label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin: 5px 10px;
 
-  &:focus-within {
-    border: 3px solid #5c92ff;
-  }
-
-  & input {
+  & > input {
     width: 100%;
     height: 100%;
     border: none;
     outline: none;
-    padding: 0px;
+    padding: 0px 0px 0px 30px;
+    width: 94%;
+    height: 30px;
+    margin: 0 auto;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+    outline: none;
+    background-color: #ffffff;
+
+    &:focus {
+      border: 1px solid #5c92ff;
+    }
   }
 }
 
 .searchIcon {
-  width: 30px;
-  height: 30px;
+  width: 17px;
+  height: 17px;
   margin-right: 5px;
   cursor: pointer;
+  position: absolute;
+  top: 7px;
+  left: 7px;
 }
 
 .crossIcon {
   display: none;
-  width: 17px;
-  height: 30px;
-  cursor: pointer;
+  width: 12px;
+  height: 12px;
   position: absolute;
   right: 15px;
+
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 23px;
+  padding-top: 3px;
 }
 
 .display {

@@ -13,19 +13,23 @@ const View = ({ filter, setFilter }) => {
 
   return (
     <Grid className={styles.container}>
-      <Grid className={styles.searchField}>
+      <label htmlFor="searchField">
         <SearchIcon className={styles.searchIcon} />
+
         <input
+          id="searchField"
           type="text"
-          placeholder="Поиск 1"
+          placeholder="Поиск"
           value={filter || ''}
           onChange={({ target: { value } }) => setFilter(value)}
         />
-        <CrossIcon
-          className={cn(styles.crossIcon, cleanIconDisplay)}
-          onClick={() => setFilter(null)}
-        />
-      </Grid>
+      </label>
+      <button
+        onClick={() => setFilter(null)}
+        className={cn(styles.crossIcon, cleanIconDisplay)}
+      >
+        <CrossIcon />
+      </button>
     </Grid>
   );
 };

@@ -5,8 +5,8 @@ import View from './view';
 import styles from './styles.scss';
 
 const defaultScale = 0.4;
-const focusScale = 0.45;
-const searchContainerWidth = 250;
+const focusScale = 0.4;
+const searchContainerWidth = 350;
 
 const defaultMapParams = {
   scale: defaultScale,
@@ -57,7 +57,10 @@ const getMapParamsOnActive = ({
   const { width } = document.getElementById(elementId).getBBox();
 
   const centerOfActiveElement = (width / 2) * focusScale;
-  const x = mapX - left + searchContainerWidth + mapWidth / 2 - centerOfActiveElement;
+
+  // const x = mapX - left + searchContainerWidth + mapWidth / 2 - centerOfActiveElement;
+  // const y = mapY - top + mapHeight / 2;
+  const x = mapX - left + searchContainerWidth - centerOfActiveElement + mapWidth / 2;
   const y = mapY - top + mapHeight / 2;
 
   return {
