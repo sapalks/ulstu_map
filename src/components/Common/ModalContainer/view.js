@@ -1,15 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import CrossIcon from 'assets/svg/cross.svg';
 import MoveInfoModal from 'components/Modals/MoveInfoModal';
 import InfoModal from 'components/Modals/InfoModal';
 import MoveModal from 'components/Modals/MoveModal';
 import AuditoryModal from 'components/Modals/AuditoryModal';
 
-import styles from './styles.scss';
+import CrossIcon from 'assets/svg/cross.svg';
 
-const focusScale = 0.45;
-const searchContainerWidth = 350;
+import styles from './styles.scss';
 
 const getModalContent = (activeElement) => {
   const { action } = activeElement;
@@ -45,22 +43,6 @@ const getModalPosition = (activeElement, mapContainer) => {
   return { left: mapWidth / 2 - 160, top: mapHeight / 2 - 240 };
 };
 
-const getCenter = (activeElement, mapContainer) => {
-  const { clientWidth: mapWidth, clientHeight: mapHeight } = mapContainer;
-  const { id: elementId } = activeElement;
-  const mapElement = document.getElementById(elementId);
-
-  if (!mapElement) {
-    return { left: 0, top: 0 };
-  }
-
-  const { x, y, width } = mapElement.getBBox();
-
-  const centerOfActiveElement = (width / 2) * focusScale;
-  // return { left: mapWidth / 2 + searchContainerWidth - 230, top: mapHeight / 2 - 185 };
-  return { left: mapWidth / 2, top: mapHeight / 2 };
-};
-
 const View = ({ activeElement, setActiveElement, mapContainer }) => {
   if (!activeElement) {
     return null;
@@ -68,7 +50,6 @@ const View = ({ activeElement, setActiveElement, mapContainer }) => {
 
   const modalContent = getModalContent(activeElement);
   const modalPosition = getModalPosition(activeElement, mapContainer);
-  const center = getCenter(activeElement, mapContainer);
 
   return (
     <>
@@ -79,10 +60,11 @@ const View = ({ activeElement, setActiveElement, mapContainer }) => {
         onMouseUp={({ preventDefault }) => preventDefault()}
       >
         {modalContent}
-        <CrossIcon className={styles.crossIcon} onClick={() => setActiveElement(null)} />
+        <button className={styles.crossButton} onClick={() => setActiveElement(null)}>
+          <CrossIcon className={styles.crossIcon} />
+        </button>
         <div className={styles.arrow} />
       </div>
-      {/* <div className={styles.point} style={{ ...center }} /> */}
     </>
   );
 };

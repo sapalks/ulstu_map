@@ -1,7 +1,7 @@
 .container {
-  width: 300px;
-  padding: 10px;
-  height: fit-content;
+  width: 290px;
+  margin: 10px;
+  height: 100%;
   max-height: 200px;
   overflow-y: scroll;
   display: flex;
@@ -12,16 +12,64 @@
   display: block;
   font-weight: bold;
   font-size: 20px;
-  margin-bottom: 15px;
 }
 
 .disc {
   display: block;
-  height: 200px;
-  overflow-y: scroll;
+  height: fit-content;
 }
 
 .enterIcon {
   cursor: pointer;
   margin: 10px auto 0px auto;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.discBlock {
+  height: fit-content;
+  overflow-y: scroll;
+
+  & > span {
+    display: block;
+  }
+}
+
+.additionalButtons {
+  position: absolute;
+  right: 1px;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mailButton {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+
+.mailIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.website {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.websiteIcon {
+  width: 17px;
+  height: 17px;
 }

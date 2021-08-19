@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 
 import { actions } from 'store/slice';
 
-import View from './view';
+import Controller from './controller';
 
 const mapDispatchToProps = {
   setActiveMapName: actions.setActiveMapName,
   setActiveElement: actions.setActiveElement,
 };
 
-const ConnectedView = connect(null, mapDispatchToProps)(View);
+const ConnectedController = connect(null, mapDispatchToProps)(Controller);
 
-export default ConnectedView;
+export default ConnectedController;

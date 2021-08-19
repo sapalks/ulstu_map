@@ -1,6 +1,6 @@
 .container {
   width: 310px;
-  height: fit-content;
+  height: 225px;
   position: absolute;
   background-color: #ffffff;
   border-radius: 5px;
@@ -8,11 +8,20 @@
 }
 
 .crossIcon {
+  width: 11px;
+  height: 11px;
+}
+
+.crossButton {
   width: 25px;
+  height: 25px;
   position: absolute;
   right: 5px;
   top: 5px;
   cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .arrow {
