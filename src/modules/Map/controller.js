@@ -5,7 +5,6 @@ import View from './view';
 import styles from './styles.scss';
 
 const defaultScale = 0.4;
-const focusScale = 0.4;
 const searchContainerWidth = 350;
 
 const defaultMapParams = {

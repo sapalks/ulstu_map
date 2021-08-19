@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   setActiveMapName: actions.setActiveMapName,
+  setActiveElement: actions.setActiveElement,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(View);
