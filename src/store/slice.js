@@ -11,6 +11,7 @@ const initialState = {
   activeMapName: 'global',
   activeElement: null,
   activeMapData: global.items,
+  activeMapConfig: null,
   directedElementId: null,
   filter: null,
   mapScale: null,
@@ -28,6 +29,7 @@ const reducers = {
   setActiveMapName: (state, { payload: mapName }) => {
     state.activeMapName = mapName;
     state.activeMapData = state.maps[mapName].items || null;
+    state.activeMapConfig = state.maps[mapName].config || null;
   },
   setActiveElement: (state, { payload: elementId }) => {
     if (elementId === null) {
@@ -64,6 +66,7 @@ const selectors = {
   getDirectedElementId: (state) => state.directedElementId,
   getFilter: (state) => state.filter,
   getMapScale: (state) => state.mapScale,
+  getActiveMapConfig: (state) => state.activeMapConfig,
 };
 
 export { actions, selectors };

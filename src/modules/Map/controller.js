@@ -16,7 +16,10 @@ const setDirectedElement = (mapData, directedElementId) => {
   Object.values(mapData).forEach(({ id }) => {
     if (id === directedElementId) {
       const element = document.getElementById(id);
-      element.classList.add(styles.directed);
+
+      if (element) {
+        element.classList.add(styles.directed);
+      }
     } else {
       const element = document.getElementById(id);
 
@@ -72,6 +75,7 @@ const Controller = ({
   directedElementId,
   activeMapName,
   activeMapElement,
+  activeMapConfig,
   setMapScale,
   ...rest
 }) => {
@@ -99,18 +103,24 @@ const Controller = ({
     }
 
     setDirectedElement(mapData, directedElementId);
-    Object.keys(mapData).forEach((element) => {
-      const mapElement = document.getElementById(element);
+    const { subdivisions } = activeMapConfig || {};
+    Object.values(mapData).forEach(({ id, subdivision }) => {
+      const mapElement = document.getElementById(id);
       if (!mapElement) {
         return null;
       }
+
       mapElement.addEventListener('click', handler);
       mapElement.classList.add(styles.interactiveObject);
+      if (subdivisions && subdivision) {
+        mapElement.style.fill = subdivisions[subdivision].color;
+        mapElement.children[0].style.fill = subdivisions[subdivision].color;
+      }
     });
 
     return () => {
-      Object.keys(mapData).forEach((element) => {
-        const mapElement = document.getElementById(element);
+      Object.values(mapData).forEach(({ id }) => {
+        const mapElement = document.getElementById(id);
         if (!mapElement) {
           return null;
         }

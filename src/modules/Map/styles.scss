@@ -18,7 +18,7 @@
   display: block;
 
   &:hover > path:nth-child(1) {
-    fill: #80c2ff;
+    opacity: 0.7;
   }
 }
 
@@ -27,7 +27,7 @@
 }
 
 .directed > path {
-  fill: #80c2ff;
+  opacity: 0.7;
 }
 
 .image {

@@ -7,6 +7,7 @@ import View from './view';
 const mapStateToProps = (state) => ({
   mapData: selectors.getActiveMapData(state),
   filter: selectors.getFilter(state),
+  mapConfig: selectors.getActiveMapConfig(state),
 });
 
 const mapDispatchToProps = {

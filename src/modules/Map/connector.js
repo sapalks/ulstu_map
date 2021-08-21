@@ -7,6 +7,7 @@ import Controller from './controller';
 const mapStateToProps = (state) => ({
   directedElementId: selectors.getDirectedElementId(state),
   activeMapName: selectors.getActiveMapName(state),
+  activeMapConfig: selectors.getActiveMapConfig(state),
   activeMapElement: selectors.getActiveElement(state),
   mapData: selectors.getActiveMapData(state),
 });
