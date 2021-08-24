@@ -95,6 +95,7 @@ const View = ({
   setMapParams,
   setActiveElement,
   activeMapName,
+  activeMapElement,
   mapContainerRef,
   mapRef,
 }) => (
@@ -105,8 +106,9 @@ const View = ({
         if (value.scale < minScale || value.scale > maxScale) {
           return null;
         }
-
-        setActiveElement(null);
+        if (activeMapElement) {
+          setActiveElement(null);
+        }
         setMapParams(value);
       }}
     >

@@ -180,6 +180,7 @@ const Controller = ({
       setMapParams={setMapParams}
       setActiveElement={setActiveElement}
       activeMapName={activeMapName}
+      activeMapElement={activeMapElement}
       mapContainerRef={mapContainerRef}
       mapRef={mapRef}
     />
