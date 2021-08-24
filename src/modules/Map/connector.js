@@ -14,6 +14,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   setActiveElement: actions.setActiveElement,
+  setActiveMapName: actions.setActiveMapName,
   setMapScale: actions.setMapScale,
 };
 

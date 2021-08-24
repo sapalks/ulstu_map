@@ -3,95 +3,15 @@
     "mapName": "c5-f4"
   },
   "items": {
-    "c5-f4-410": {
-      "id": "c5-f4-410",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "stairs": {
+      "id": "stairs",
+      "action": "move",
+      "direction": "c5-f3"
     },
-    "c5-f4-409": {
-      "id": "c5-f4-409",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-408": {
-      "id": "c5-f4-408",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-404": {
-      "id": "c5-f4-404",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-411": {
-      "id": "c5-f4-411",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-412": {
-      "id": "c5-f4-412",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-405": {
-      "id": "c5-f4-405",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-413": {
-      "id": "c5-f4-413",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-chancellery": {
-      "id": "c5-f4-chancellery",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-401": {
-      "id": "c5-f4-401",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-403": {
-      "id": "c5-f4-403",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-403a": {
-      "id": "c5-f4-403a",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-402": {
-      "id": "c5-f4-402",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-cp2": {
-      "id": "c5-f4-cp2",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c5-f4-wc": {
-      "id": "c5-f4-wc",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "stairs_2": {
+      "id": "stairs_2",
+      "action": "move",
+      "direction": "c5-f3"
     }
   }
 }

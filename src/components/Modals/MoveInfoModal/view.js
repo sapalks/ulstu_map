@@ -81,7 +81,14 @@ const getInfoButtons = (additional, setIsTextCopied) => {
   );
 };
 
-const View = ({ element, setActiveMapName, setActiveElement, isTextCopied, setIsTextCopied }) => {
+const View = ({
+  element,
+  setActiveMapName,
+  setActiveElement,
+  isTextCopied,
+  setIsTextCopied,
+  isInfoOnly,
+}) => {
   const { name, disc, direction, additional } = element;
 
   const additionalBlocks = getAdditionalBlocks(additional);
@@ -95,13 +102,15 @@ const View = ({ element, setActiveMapName, setActiveElement, isTextCopied, setIs
         {additionalBlocks}
       </div>
 
-      <MoveButton
-        className={styles.enterIcon}
-        onClick={() => {
-          setActiveMapName(direction);
-          setActiveElement(null);
-        }}
-      />
+      {!isInfoOnly && (
+        <MoveButton
+          className={styles.enterIcon}
+          onClick={() => {
+            setActiveMapName(direction);
+            setActiveElement(null);
+          }}
+        />
+      )}
       {infoButtons}
       <CopyModal isTextCopied={isTextCopied} message="Почта скопирована" />
     </div>

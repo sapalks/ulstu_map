@@ -1,8 +1,6 @@
 import React from 'react';
 
 import MoveInfoModal from 'components/Modals/MoveInfoModal';
-import InfoModal from 'components/Modals/InfoModal';
-import MoveModal from 'components/Modals/MoveModal';
 import AuditoryModal from 'components/Modals/AuditoryModal';
 
 import CrossIcon from 'assets/svg/cross.svg';
@@ -16,12 +14,8 @@ const getModalContent = (activeElement) => {
     return <MoveInfoModal element={activeElement} />;
   }
 
-  if (action === 'move') {
-    return <MoveModal element={activeElement} />;
-  }
-
   if (action === 'info') {
-    return <InfoModal element={activeElement} />;
+    return <MoveInfoModal element={activeElement} isInfoOnly />;
   }
 
   if (action === 'auditory') {

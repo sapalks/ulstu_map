@@ -1,0 +1,12 @@
+{
+  "config": {
+    "mapName": "c3-f1-1"
+  },
+  "items": {
+    "stairs": {
+      "id": "stairs",
+      "action": "move",
+      "direction": "c3-f2-1"
+    }
+  }
+}

@@ -3,203 +3,25 @@
     "mapName": "c2-f2"
   },
   "items": {
-    "c2-f2-wc": {
-      "id": "c2-f2-wc",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "stairs": {
+      "id": "stairs",
+      "action": "move",
+      "direction": "c2-f3"
     },
-    "c2-f2-n202": {
-      "id": "c2-f2-n202",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "stairs_2": {
+      "id": "stairs_2",
+      "action": "move",
+      "direction": "c2-f3"
     },
-    "c2-f2-n207": {
-      "id": "c2-f2-n207",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "stairs_3": {
+      "id": "stairs_3",
+      "action": "move",
+      "direction": "c2-f3"
     },
-    "c2-f2-n211": {
-      "id": "c2-f2-n211",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n213": {
-      "id": "c2-f2-n213",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n215": {
-      "id": "c2-f2-n215",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n221": {
-      "id": "c2-f2-n221",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n201": {
-      "id": "c2-f2-n201",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n205": {
-      "id": "c2-f2-n205",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n209": {
-      "id": "c2-f2-n209",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n230": {
-      "id": "c2-f2-n230",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n228": {
-      "id": "c2-f2-n228",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n226": {
-      "id": "c2-f2-n226",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n200": {
-      "id": "c2-f2-n200",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n202_2": {
-      "id": "c2-f2-n202_2",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n212": {
-      "id": "c2-f2-n212",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n214": {
-      "id": "c2-f2-n214",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n204": {
-      "id": "c2-f2-n204",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n206": {
-      "id": "c2-f2-n206",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n220": {
-      "id": "c2-f2-n220",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n208": {
-      "id": "c2-f2-n208",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n218": {
-      "id": "c2-f2-n218",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n210": {
-      "id": "c2-f2-n210",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n216": {
-      "id": "c2-f2-n216",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n224": {
-      "id": "c2-f2-n224",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n224_2": {
-      "id": "c2-f2-n224_2",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n227": {
-      "id": "c2-f2-n227",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n225": {
-      "id": "c2-f2-n225",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n223": {
-      "id": "c2-f2-n223",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n229": {
-      "id": "c2-f2-n229",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n231": {
-      "id": "c2-f2-n231",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n217": {
-      "id": "c2-f2-n217",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c2-f2-n219": {
-      "id": "c2-f2-n219",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "stairs_4": {
+      "id": "stairs_4",
+      "action": "move",
+      "direction": "c2-f3"
     }
   }
 }

@@ -3,149 +3,25 @@
     "mapName": "c3-f1"
   },
   "items": {
-    "c3-f1-itcube": {
-      "id": "c3-f1-itcube",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "stairs": {
+      "id": "stairs",
+      "action": "move",
+      "direction": "c3-f2"
     },
-    "c3-f1-115": {
-      "id": "c3-f1-115",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "stairs_2": {
+      "id": "stairs_2",
+      "action": "move",
+      "direction": "c3-f2"
     },
-    "c3-f1-117": {
-      "id": "c3-f1-117",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "transition": {
+      "id": "transition",
+      "action": "move",
+      "direction": "c3-f2-1"
     },
-    "c3-f1-112": {
-      "id": "c3-f1-112",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-116": {
-      "id": "c3-f1-116",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-107": {
-      "id": "c3-f1-107",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-123": {
-      "id": "c3-f1-123",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-125": {
-      "id": "c3-f1-125",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-127": {
-      "id": "c3-f1-127",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-118": {
-      "id": "c3-f1-118",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-129": {
-      "id": "c3-f1-129",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-110a": {
-      "id": "c3-f1-110a",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-110": {
-      "id": "c3-f1-110",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-119": {
-      "id": "c3-f1-119",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-buffet": {
-      "id": "c3-f1-buffet",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-105": {
-      "id": "c3-f1-105",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-wc": {
-      "id": "c3-f1-wc",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-102": {
-      "id": "c3-f1-102",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-114": {
-      "id": "c3-f1-114",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-122": {
-      "id": "c3-f1-122",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-131": {
-      "id": "c3-f1-131",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-104": {
-      "id": "c3-f1-104",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-106a": {
-      "id": "c3-f1-106a",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
-    },
-    "c3-f1-108": {
-      "id": "c3-f1-108",
-      "name": "Название 1",
-      "action": "info",
-      "disc": "Описание 1"
+    "transition_2": {
+      "id": "transition_2",
+      "action": "move",
+      "direction": "c3-f2-1"
     }
   }
 }

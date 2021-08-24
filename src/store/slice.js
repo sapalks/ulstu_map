@@ -6,6 +6,7 @@ import c2 from 'maps/c2';
 import c3 from 'maps/c3';
 import c4 from 'maps/c4';
 import c5 from 'maps/c5';
+import c6 from 'maps/c6';
 
 const initialState = {
   activeMapName: 'global',
@@ -22,6 +23,7 @@ const initialState = {
     ...c3,
     ...c4,
     ...c5,
+    ...c6,
   },
 };
 

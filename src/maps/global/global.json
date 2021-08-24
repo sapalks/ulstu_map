@@ -6,37 +6,35 @@
     "c-n1": {
       "id": "c-n1",
       "name": "Название 1",
-      "action": "move_info",
-      "direction": "c1-f1",
+      "action": "info",
       "disc": "Описание 1"
     },
     "c-n2": {
       "id": "c-n2",
       "name": "Название 2",
-      "action": "move_info",
-      "direction": "c1-f1",
+      "action": "info",
       "disc": "Описание 2"
     },
     "c-n3": {
       "id": "c-n3",
       "name": "Название 3",
       "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 3"
+      "disc": "Описание 3",
+      "direction": "c6-f1"
     },
     "c-n4": {
       "id": "c-n4",
       "name": "Название 4",
       "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 4"
+      "disc": "Описание 4",
+      "direction": "c3-cr-f1"
     },
     "c-n5": {
       "id": "c-n5",
       "name": "Название 5",
       "action": "move_info",
-      "direction": "c1-f1",
       "disc": "Это очень большое описание данного объекта. Оно такое большое, что мне пришлось даже писать второе предложение.",
+      "direction": "c3-f1",
       "additional": {
         "phone": "79999999999",
         "responsible": "Петренко А. В.",
@@ -48,114 +46,233 @@
     "c-n6": {
       "id": "c-n6",
       "name": "Название 6",
-      "action": "move_info",
-      "direction": "c1-f1",
+      "action": "info",
       "disc": "Описание 6"
     },
     "c-n7": {
       "id": "c-n7",
       "name": "Название 7",
       "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 7"
+      "disc": "Описание 7",
+      "direction": "c5-f1",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n8": {
       "id": "c-n8",
       "name": "Название 8",
       "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 8"
+      "disc": "Описание 8",
+      "direction": "c4-f1",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n9": {
       "id": "c-n9",
       "name": "Название 9",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 9"
+      "action": "info",
+      "disc": "Описание 9",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n10": {
       "id": "c-n10",
       "name": "Название 10",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 10"
+      "action": "info",
+      "disc": "Описание 10",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n11": {
       "id": "c-n11",
       "name": "Название 11",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 11"
+      "action": "info",
+      "disc": "Описание 11",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n12": {
       "id": "c-n12",
       "name": "Название 12",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 12"
+      "action": "info",
+      "disc": "Описание 12",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n13": {
       "id": "c-n13",
       "name": "Название 13",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 13"
+      "action": "info",
+      "disc": "Описание 13",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n14": {
       "id": "c-n14",
       "name": "Название 14",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 14"
+      "action": "info",
+      "disc": "Описание 14",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n15": {
       "id": "c-n15",
       "name": "Название 15",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 15"
+      "action": "info",
+      "disc": "Описание 15",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n16": {
       "id": "c-n16",
       "name": "Название 16",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 16"
+      "action": "info",
+      "disc": "Описание 16",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n17": {
       "id": "c-n17",
       "name": "Название 17",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 17"
+      "action": "info",
+      "disc": "Описание 17",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n18": {
       "id": "c-n18",
       "name": "Название 18",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 18"
+      "action": "info",
+      "disc": "Описание 18",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n19": {
       "id": "c-n19",
       "name": "Название 19",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 19"
+      "action": "info",
+      "disc": "Описание 19",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n20": {
       "id": "c-n20",
       "name": "Название 20",
-      "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 20"
+      "action": "info",
+      "disc": "Описание 20",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     },
     "c-n21": {
       "id": "c-n21",
       "name": "Название 21",
       "action": "move_info",
-      "direction": "c1-f1",
-      "disc": "Описание 21"
+      "disc": "Описание 21",
+      "direction": "c2-f1",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
+    },
+    "c-n22": {
+      "id": "c-n22",
+      "name": "Название 21",
+      "action": "info",
+      "disc": "Описание 21",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
+    },
+    "c-n23": {
+      "id": "c-n23",
+      "name": "Название 21",
+      "action": "move_info",
+      "disc": "Описание 21",
+      "direction": "c1-f1a",
+      "additional": {
+        "phone": "79999999999",
+        "responsible": "Петренко А. В.",
+        "workingHours": "08:00 - 09:00",
+        "email": "ulstumail@gmail.com",
+        "website": "https://ulstu.ru/"
+      }
     }
   }
 }

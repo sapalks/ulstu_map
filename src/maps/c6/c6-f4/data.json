@@ -1,0 +1,17 @@
+{
+  "config": {
+    "mapName": "c6-f4"
+  },
+  "items": {
+    "stairs": {
+      "id": "stairs",
+      "action": "move",
+      "direction": "c6-f5"
+    },
+    "stairs_2": {
+      "id": "stairs_2",
+      "action": "move",
+      "direction": "c6-f5"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "config": {
+    "mapName": "c6-f1"
+  },
+  "items": {
+    "enter": {
+      "id": "enter",
+      "action": "move",
+      "direction": "global"
+    },
+    "enter_2": {
+      "id": "enter_2",
+      "action": "move",
+      "direction": "global"
+    },
+    "stairs_2": {
+      "id": "stairs_2",
+      "action": "move",
+      "direction": "c6-f2"
+    }
+  }
+}

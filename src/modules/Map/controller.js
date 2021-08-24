@@ -72,6 +72,7 @@ const getMapParamsOnActive = ({
 const Controller = ({
   mapData,
   setActiveElement,
+  setActiveMapName,
   directedElementId,
   activeMapName,
   activeMapElement,
@@ -93,6 +94,17 @@ const Controller = ({
     setActiveElement(mapElementId);
   };
 
+  const moveHandler = (event) => {
+    const {
+      target: {
+        parentElement: { id: mapElementId },
+      },
+    } = event;
+    const { direction } = Object.values(mapData).find(({ id }) => id === mapElementId);
+    setActiveMapName(direction);
+    setActiveElement(null);
+  };
+
   useEffect(() => {
     setMapScale(mapParams.scale);
   }, [mapParams.scale]);
@@ -104,13 +116,16 @@ const Controller = ({
 
     setDirectedElement(mapData, directedElementId);
     const { subdivisions } = activeMapConfig || {};
-    Object.values(mapData).forEach(({ id, subdivision }) => {
+    Object.values(mapData).forEach(({ id, subdivision, action }) => {
       const mapElement = document.getElementById(id);
       if (!mapElement) {
         return null;
       }
-
-      mapElement.addEventListener('click', handler);
+      if (action === 'move') {
+        mapElement.addEventListener('click', moveHandler);
+      } else {
+        mapElement.addEventListener('click', handler);
+      }
       mapElement.classList.add(styles.interactiveObject);
       if (subdivisions && subdivision) {
         mapElement.style.fill = subdivisions[subdivision].color;
